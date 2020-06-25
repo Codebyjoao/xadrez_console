@@ -8,13 +8,15 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
-            /*try
+            try
             {
                 Tabuleiro tab = new Tabuleiro(8, 8);
 
                 tab.Colocarpecas(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-                tab.Colocarpecas(new Torre(tab, Cor.Preta), new Posicao(1, 9));
+                tab.Colocarpecas(new Torre(tab, Cor.Preta), new Posicao(1, 3));
                 tab.Colocarpecas(new Rei(tab, Cor.Preta), new Posicao(0, 2));
+
+                tab.Colocarpecas(new Torre(tab, Cor.Branca), new Posicao(3, 5));
 
 
                 Tela.ImprimirTabuleiro(tab);
@@ -22,13 +24,9 @@ namespace xadrez_console
             catch(TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
-            }*/
+            }
 
-            PosXadrez pos = new PosXadrez('a',1);
-
-            Console.WriteLine(pos);
-
-            Console.WriteLine(pos.ToPosicao());
+            
         }    
     }
 }
