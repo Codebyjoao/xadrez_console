@@ -31,11 +31,19 @@ namespace xadrez
 
         private void ColocarPecas()
         {
-            Tab.Colocarpecas(new Torre(Tab, Cor.Preta), new PosXadrez('c', 1).ToPosicao()); 
-            Tab.Colocarpecas(new Torre(Tab, Cor.Preta), new PosXadrez('b', 3).ToPosicao());
-            Tab.Colocarpecas(new Rei(Tab, Cor.Preta), new PosXadrez('a', 2).ToPosicao());
+            Tab.Colocarpecas(new Torre(Tab, Cor.Branca), new PosXadrez('c', 1).ToPosicao()); 
+            Tab.Colocarpecas(new Torre(Tab, Cor.Branca), new PosXadrez('c', 2).ToPosicao());
+            Tab.Colocarpecas(new Rei(Tab, Cor.Branca), new PosXadrez('d', 1).ToPosicao());
+            Tab.Colocarpecas(new Torre(Tab, Cor.Branca), new PosXadrez('d', 2).ToPosicao());
+            Tab.Colocarpecas(new Torre(Tab, Cor.Branca), new PosXadrez('e', 1).ToPosicao());
+            Tab.Colocarpecas(new Torre(Tab, Cor.Branca), new PosXadrez('e', 2).ToPosicao());
 
-            Tab.Colocarpecas(new Torre(Tab, Cor.Branca), new PosXadrez('d', 5).ToPosicao());
+            Tab.Colocarpecas(new Torre(Tab, Cor.Preta), new PosXadrez('c', 8).ToPosicao());
+            Tab.Colocarpecas(new Torre(Tab, Cor.Preta), new PosXadrez('c', 7).ToPosicao());
+            Tab.Colocarpecas(new Rei(Tab, Cor.Preta), new PosXadrez('d', 8).ToPosicao());
+            Tab.Colocarpecas(new Torre(Tab, Cor.Preta), new PosXadrez('d', 7).ToPosicao());
+            Tab.Colocarpecas(new Torre(Tab, Cor.Preta), new PosXadrez('e', 8).ToPosicao());
+            Tab.Colocarpecas(new Torre(Tab, Cor.Preta), new PosXadrez('e', 7).ToPosicao());
         }
     }   
 }
