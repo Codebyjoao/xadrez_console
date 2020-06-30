@@ -24,6 +24,11 @@ namespace tabuleiro
             QtdMovimento++;
         }
 
+        public void DecrementarQtdMovimento()
+        {
+            QtdMovimento--;
+        }
+
         public abstract bool[,] MovimentosPossiveis();
 
         public bool ExisteMovimentosPossiveis()
