@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using tabuleiro;
 
-namespace xadrez_console.xadrez
+namespace xadrez
 {
     class Cavalo : Peca
     {
@@ -27,6 +27,57 @@ namespace xadrez_console.xadrez
             bool[,] mat = new bool[Tab.Linhas, Tab.Colunas];
 
             Posicao pos = new Posicao(0, 0);
+
+            
+            pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna -2);
+            if (Tab.PossicaoValida(pos) && PodeMover(pos))
+            {
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            
+            pos.DefinirValores(Posicao.Linha - 2, Posicao.Coluna- 1);
+            if (Tab.PossicaoValida(pos) && PodeMover(pos))
+            {
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+
+            
+            pos.DefinirValores(Posicao.Linha - 2, Posicao.Coluna +1);
+            if (Tab.PossicaoValida(pos) && PodeMover(pos))
+            {
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            
+            pos.DefinirValores(Posicao.Linha - 1, Posicao.Coluna+2);
+            if (Tab.PossicaoValida(pos) && PodeMover(pos))
+            {
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            
+            pos.DefinirValores(Posicao.Linha + 1, Posicao.Coluna+2);
+            if (Tab.PossicaoValida(pos) && PodeMover(pos))
+            {
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            
+            pos.DefinirValores(Posicao.Linha +2, Posicao.Coluna+1);
+            if (Tab.PossicaoValida(pos) && PodeMover(pos))
+            {
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            
+            pos.DefinirValores(Posicao.Linha +2, Posicao.Coluna-1);
+            if (Tab.PossicaoValida(pos) && PodeMover(pos))
+            {
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+            
+            pos.DefinirValores(Posicao.Linha +1, Posicao.Coluna-2);
+            if (Tab.PossicaoValida(pos) && PodeMover(pos))
+            {
+                mat[pos.Linha, pos.Coluna] = true;
+            }
+
             return mat;
 
         }
